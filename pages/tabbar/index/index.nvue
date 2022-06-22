@@ -1,0 +1,81 @@
+<template>
+	<view class="index-page">
+    <!-- 导航栏 -->
+    <view class="bg-light">
+      <!-- 状态栏 -->
+      <view :style="'height:'+statusBarHeight+'px'"></view>
+      <!-- 导航 -->
+      <view class="navbar w-100">
+        <!-- 左边 -->
+        <view class="navbar-left">
+          <!-- 标题 -->
+          <text class="flex align-center ml-3 font-md">微信(10)</text>
+        </view>
+        <!-- 右边 -->
+        <view class="navbar-right">
+          <view class="search">
+            <text class="iconfont flex align-center font-md">&#xe6e3;</text>
+          </view>
+          <view class="add">
+            <text class="iconfont flex align-center font-md">&#xe682;</text>
+          </view>
+        </view>
+      </view>
+    </view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				statusBarHeight: 0
+			}
+		},
+		onLoad() {
+      // #ifdef APP-PLUS-NVUE
+      this.statusBarHeight = plus.navigator.getStatusbarHeight()
+      // #endif
+		},
+		methods: {
+
+		}
+	}
+</script>
+
+<style scoped>
+  .navbar {
+    height: 90rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .search {
+    width: 90rpx;
+    height: 90rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add {
+    width: 90rpx;
+    height: 90rpx;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
