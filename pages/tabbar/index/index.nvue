@@ -1,5 +1,5 @@
 <template>
-	<view class="index-page">
+	<view>
     <!-- 导航栏 -->
     <view class="bg-light">
       <!-- 状态栏 -->
